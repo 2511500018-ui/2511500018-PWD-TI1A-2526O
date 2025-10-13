@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Dikynsh</title>
+    <title>hey yo bro</title>
     <style>
       #about { 
         background-color:  #ffffff;
@@ -41,6 +41,36 @@
         flex-shrink: 0;
       }
 
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      form label {
+        font-weight: 600;
+        color: #003366;
+      }
+
+      form input, form textarea, form button {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      form button {
+        background-color: #003366;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      form button:hover {
+        background-color: #0055aa;
+      }
+
       @media (max-width: 600px) {
         #about p {
             flex-direction: column;
@@ -50,54 +80,45 @@
             text-align: left;
             padding-right: 0;
             margin-bottom: 2px;
-        }
-      }
+        }
+      }
  </style> 
 </head>
 <body>
-    <header><h1>Ini Header<h1>
-        <h2></h2>
-        <p></p>
-    </section>
-    <section>
-        <h2></h2>
-        <p></p>
-    </section></h1>
+  <header>
+    <h1>Ini Header</h1>
     <nav>
         <ul>
             <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#about">Tentang & Kontak</a></li>
         </ul>
     </nav>
-</header>
-<main>
+  </header>
+
+  <main>
     <section id="home">
-      <h2>Mahasiswa Teknik Informatika</h2>
-      <p>Chill aja cuyy</p>
+      <h2>Selamat Datang</h2>
+      <p>Ini contoh paragraf HTML.</p>
     </section>
 
     <section id="about">
       <h2>Tentang Saya</h2>
       <p><strong>Nim:</strong>2511500018</p>
-        <p><strong>Nama Lengkap:</strong> Dika Yansah &#128512;</p>
-        <p><strong>Tempat lahir:</strong> Pangkalpinang, &#128526;</p> 
-        <p><strong>Tanggal Lahir:</strong> &#127874; 13 Desember 2006</p>
-        <p><strong>Hobi Saya:</strong> Mendengarkan musik &#127911; Bermain game &#127918;</p>
-        <p><strong>Pasangan:</strong> Belum laku &#128514;</p>
-        <p><strong>Saya berstatus:</strong> Mahasiswa &#127891;</p> 
-        <p><strong>Nama ayah:</strong> Marwadi &#128104;</p>
-        <p><strong>Nama ibu:</strong> Ngatinah&#128105;</p>
-        <p><strong>Nama kakak:</strong> Indah nuryanto &#128102;</p> 
-        <p><strong>Nama Adik:</strong> Tidak ada &#128517;</p>
-    </section>
+      <p><strong>Nama Lengkap:</strong> Dika Yansah &#128512;</p>
+      <p><strong>Tempat lahir:</strong> Pangkalpinang, &#128526;</p> 
+      <p><strong>Tanggal Lahir:</strong> &#127874; 13 Desember 2006</p>
+      <p><strong>Hobi Saya:</strong> Mendengarkan musik &#127911; Bermain game &#127918;</p>
+      <p><strong>Pasangan:</strong> Belum laku &#128514;</p>
+      <p><strong>Saya berstatus:</strong> Mahasiswa &#127891;</p> 
+      <p><strong>Nama ayah:</strong> Marwadi &#128104;</p>
+      <p><strong>Nama ibu:</strong> Ngatinah &#128105;</p>
+      <p><strong>Nama kakak:</strong> Indah Nuryanto &#128102;</p> 
+      <p><strong>Nama adik:</strong> Tidak ada &#128517;</p>
 
-    <section id="contact">
-      <h2>Kontak Kami</h2>
+      <h2>Kontak Saya</h2>
       <form action="" method="get">
-        <input type="color">
         <label for="txtNama">Nama:</label>
-        <input maxlength="10 type="text" id="txtNama" name="txtNama" placeholder="Isikan Nama" required autocomplete="name">
+        <input type="text" id="txtNama" name="txtNama" placeholder="Isikan Nama" required maxlength="10" autocomplete="name">
 
         <label for="txtEmail">Email:</label>
         <input type="email" id="txtEmail" name="txtEmail" placeholder="Isikan Email" required autocomplete="email">
@@ -105,11 +126,13 @@
         <label for="txtPesan">Pesan:</label>
         <textarea rows="4" id="txtPesan" name="txtPesan" placeholder="Isikan Pesan" required></textarea>
 
-        <button type="summit">kirim</button>
-        <button type="reset">batal</button>
-        </form>
-      </section>
-<footer>
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
     <p>&copy; 2025 DIKA YANSAH [2511500018]</p>
   </footer>
 </body>
