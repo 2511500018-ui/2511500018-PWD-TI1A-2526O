@@ -66,10 +66,20 @@
         color: white;
         cursor: pointer;
         transition: 0.3s;
+        width: 120px;
+        font-size: 15px;
+        padding: 10px 0;
       }
 
       form button:hover {
         background-color: #0088cc;
+      }
+
+      form div {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
       }
 
       @media (max-width: 600px) {
@@ -132,9 +142,11 @@
         <label for="txtPesan">Pesan:</label>
         <textarea rows="4" id="txtPesan" name="txtPesan" placeholder="Isikan Pesan" required></textarea>
 
-      <div class=>
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
+        
+        <div>
+          <button type="submit">Kirim</button>
+          <button type="reset">Batal</button>
+        </div>
       </form>
     </section>
   </main>
