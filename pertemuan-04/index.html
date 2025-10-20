@@ -4,165 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Dikynsh</title>
-  <style>
-    body {
-      background-color: #e8ebf0;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-    
-    nav {
-      background-color: #001f3f;
-      padding: 10px 0;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav ul li a:hover {
-      color: #00ccff;
-    }
-
-    main {
-      padding: 20px;
-      text-align: center;
-    }
-
-    #about { 
-      background-color: #1b1b3a;
-      color: white;
-      border: 2px solid #00aaff;
-      border-radius: 15px;
-      padding: 20px;
-      max-width: 700px;
-      margin: 40px auto;
-      box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
-    }
-
-    #about h2 { 
-      color: #ffff33;
-      border-bottom: 2px solid #00aaff;
-      padding-bottom: 6px;
-      margin-bottom: 16px;
-      text-align: center;
-    }
-
-    #about p {
-      display: flex;
-      justify-content: flex-start;
-      align-items: baseline;
-      margin: 4px 0;
-      padding: 6px 0;
-      border-bottom: 1px solid #2c2c5a;
-    }
-
-    #about strong {
-      min-width: 180px;
-      color: #00aaff;
-      font-weight: 600;
-      text-align: right;
-      padding-right: 16px;
-      flex-shrink: 0;
-    }
-
-    form {
-      margin-top: 25px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    form label {
-      font-weight: bold;
-      color: #00ccff;
-    }
-
-    form input, form textarea {
-      padding: 8px;
-      border-radius: 8px;
-      border: none;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    form button {
-      background-color: #00aaff;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    form button:hover {
-      background-color: #0088cc;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 20px;
-      padding: 15px;
-      background-color: #003366;
-      color: white;
-    }
-
-    @media (max-width: 600px) {
-      #about p {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      #about strong {
-        text-align: left;
-        padding-right: 0; 
-        margin-bottom: 2px;
-      }
-    }
-
-    .foto-saya {
-  width: 230px;          
-  height: 230px;
-  border-radius: 50%;    
-  border: 3px solid #00aaff;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
-}
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
     <p>Selamat datang semuanya</p>
-    <h1>Ini Web Pribadi Saya </h1>
+    <h1>Ini Web Pribadi Saya</h1>
   </header>
 
   <nav>
@@ -185,14 +33,14 @@
       <p><strong>Nim:</strong> &#127380; 2511500018</p>
       <p><strong>Nama Lengkap:</strong> Dika Yansah &#128526;</p>
       <p><strong>Tempat lahir:</strong> Pangkalpinang &#128205;</p>
-      <p><strong>Tanggal Lahir:</strong> &#128197; 13 Desember 2006 </p>
+      <p><strong>Tanggal Lahir:</strong> &#128197; 13 Desember 2006</p>
       <p><strong>Hobi Saya:</strong> Mendengarkan musik &#127911; Bermain game &#127918;</p>
       <p><strong>Pasangan:</strong> Belum laku &#128514;</p>
       <p><strong>Saya berstatus:</strong> Mahasiswa &#127891;</p>
       <p><strong>Nama ayah:</strong> Marwadi &#128104;</p>
       <p><strong>Nama ibu:</strong> Ngatinah &#128105;</p>
       <p><strong>Nama kakak:</strong> Indah Nuryanto &#128102;</p>
-      <p><strong>Nama Adik:</strong> Tidak ada &#128517;</p>
+      <p><strong>Nama Adik:</strong> Tidak ada &#128518;</p>
 
       <h2 id="contact">Kontak Saya</h2>
       <form action="#" method="get">
@@ -205,10 +53,8 @@
         <label for="txtPesan">Pesan:</label>
         <textarea rows="4" id="txtPesan" name="txtPesan" placeholder="Isikan Pesan" required></textarea>
 
-        <div class=>
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
-       </div>
       </form>
     </section>
   </main>
