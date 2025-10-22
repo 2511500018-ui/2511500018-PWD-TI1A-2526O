@@ -1,1 +1,72 @@
-# pertemuan-05
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh JavaScript Dasar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <header>
+    <p>Selamat datang semuanya</p>
+    <h1>Ini Web Pribadi Saya</h1>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+      &#9776;
+      </button>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Mahasiswa Teknik Informatika</h2>
+      <img src="foto di perahu.jpg" alt="Foto Profil Dika" class="foto-saya">
+      <p>Chill aja cuy...</p>
+    </section>
+
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <p><strong>Nim:</strong> &#127380; 2511500018</p>
+      <p><strong>Nama Lengkap:</strong> Dika Yansah &#128526;</p>
+      <p><strong>Tempat lahir:</strong> Pangkalpinang &#128205;</p>
+      <p><strong>Tanggal Lahir:</strong> &#128197; 13 Desember 2006</p>
+      <p><strong>Hobi Saya:</strong> Mendengarkan musik &#127911; Bermain game &#127918;</p>
+      <p><strong>Pasangan:</strong> Belum laku &#128514;</p>
+      <p><strong>Saya berstatus:</strong> Mahasiswa &#127891;</p>
+      <p><strong>Nama ayah:</strong> Marwadi &#128104;</p>
+      <p><strong>Nama ibu:</strong> Ngatinah &#128105;</p>
+      <p><strong>Nama kakak:</strong> Indah Nuryanto &#128102;</p>
+      <p><strong>Nama Adik:</strong> Tidak ada &#128517;</p>
+
+      <h2 id="contact">Kontak Saya</h2>
+      <form action="#" method="get">
+        <label for="txtNama">Nama:</label>
+        <input type="text" id="txtNama" name="txtNama" placeholder="Isikan Nama" required>
+
+        <label for="txtEmail">Email:</label>
+        <input type="email" id="txtEmail" name="txtEmail" placeholder="Isikan Email" required>
+
+        <label for="txtPesan">Pesan:</label>
+        <textarea rows="4" id="txtPesan" name="txtPesan" placeholder="Isikan Pesan" required></textarea>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DIKA YANSAH [2511500018]</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
