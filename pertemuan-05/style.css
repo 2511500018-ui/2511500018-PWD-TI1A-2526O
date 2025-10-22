@@ -48,7 +48,8 @@ main {
   text-align: center;
 }
 
-#about {
+#about,
+#contact {
   background-color: #1b1b3a;
   color: white;
   border: 2px solid #00aaff;
@@ -59,7 +60,8 @@ main {
   box-shadow: 0 0 15px rgba(0, 170, 255, 0.5);
 }
 
-#about h2 {
+#about h2,
+#contact h2 {
   color: #ffff33;
   border-bottom: 2px solid #00aaff;
   padding-bottom: 6px;
@@ -128,33 +130,33 @@ footer {
 }
 
 .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 28px;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        left: 16px;
-        top: 8px;
-    } 
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 8px;
+  }
 
-nav {
+  nav {
     display: none;
     flex-direction: column;
     background: #003366;
     width: 100%;
     padding: 5px 0;
-}
+  }
 
-nav.active {
+  nav.active {
     display: flex;
-}
+  }
 
   #about p {
     flex-direction: column;
