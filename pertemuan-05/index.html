@@ -11,6 +11,32 @@
   <script>
     alert("Halo Dunia");
   </script>
+  <p id="pesan">Teks awal</p>
+<button onclick="ubahTeks()">Ubah Teks</button>
+<script>
+function ubahTeks() {
+document.getElementById("pesan").innerText = "Teks berhasil diubah!";
+}
+</script>
+<button id="tombol">Klik Saya</button>
+<script>
+document.getElementById("tombol").addEventListener("click", function() {
+alert("Tombol diklik!");
+});
+</script>
+<input type="text" id="nama" placeholder="Masukkan nama">
+<button onclick="cekNama()">Submit</button>
+<script>
+function cekNama() {
+let nama = document.getElementById("nama").value;
+if (nama === "") {
+alert("Nama tidak boleh kosong!");
+} else {
+alert("Halo, " + nama + "!");
+}
+}
+</script>
+</body>
 
 </script>
   <header>
