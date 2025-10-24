@@ -75,6 +75,27 @@
   <footer>
     <p>&copy; 2025 DIKA YANSAH [2511500018]</p>
   </footer>
+    <script>
+      function ubahTeks() {
+      document.getElementById("pesan").innerText = "Teks berhasil diubah!";
+    }
+
+    // Event klik tombol
+    document.getElementById("tombol").addEventListener("click", function() {
+      alert("Tombol diklik!");
+      console.log("Tombol berhasil diklik!");
+    });
+
+    // Fungsi cek nama
+    function cekNama() {
+      let nama = document.getElementById("nama").value;
+      if (nama === "") {
+        alert("Nama tidak boleh kosong!");
+      } else {
+        alert("Halo, " + nama + "!");
+      }
+    }
+    </script>
 
   <script src="script.js"></script>
 </body>
