@@ -3,41 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contoh JavaScript Dasar</title>
+  <title>Judul Halaman</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <script>
-    alert("Halo Dunia");
-  </script>
-</body>
-
-</script>
   <header>
-    <p>Selamat datang semuanya</p>
-    <h1>Ini Web Pribadi Saya</h1>
+    <h1>Ini Header</h1>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
-      &#9776;
+      &#9776; 
     </button>
+    <nav>
+      <ul type="square">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
   </header>
-
-  <nav>
-    <ul>
-      <li><a href="#home">Beranda</a></li>
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#contact">Kontak</a></li>
-    </ul>
-  </nav>
-
+ 
   <main>
     <section id="home">
-      <h2>Mahasiswa Teknik Informatika</h2>
-      <img src="foto di perahu.jpg" alt="Foto Profil Dika" class="foto-saya">
-      <p>Chill aja cuy...</p>
+      <h2>Selamat Datang</h2>
+      <p>Ini contoh paragraf HTML.</p> 
     </section>
 
-    
     <section id="about">
       <h2>Tentang Saya</h2>
       <p><strong>Nim:</strong> &#127380; 2511500018</p>
@@ -53,34 +42,56 @@
       <p><strong>Nama Adik:</strong> Tidak ada &#128517;</p>
     </section>
 
-    
+
     <section id="contact">
-      <h2>Kontak Saya</h2>
-      <form action="#" method="get">
-        <label for="txtNama">Nama:</label>
-        <input type="text" id="txtNama" name="txtNama" placeholder="Isikan Nama" required>
+      <h2>Kontak Kami</h2>
+      <form id="formKontak">
+        <label>
+          <span>Nama:</span>
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama">
+        </label>
 
-        <label for="txtEmail">Email:</label>
-        <input type="email" id="txtEmail" name="txtEmail" placeholder="Isikan Email" required>
+        <label>
+          <span>Email:</span>
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email">
+        </label>
 
-        <label for="txtPesan">Pesan:</label>
-        <textarea rows="4" id="txtPesan" name="txtPesan" placeholder="Isikan Pesan" required></textarea>
+        <label>
+          <span>Pesan Anda:</span>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..."></textarea>
+        </label>
 
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
+        <small id="charCount">0/200 karakter</small>
+        <div class="tombol">
+          <button type="submit">Kirim</button>
+          <button type="reset">Batal</button>
+        </div>
       </form>
+    </section>
+
+    <section id="latihan">
+      <h2>Latihan JavaScript</h2>
+      <p id="pesan">Teks awal</p>
+      <button onclick="ubahTeks()">Ubah Teks</button>
+      <br><br>
+      <button id="tombol">Klik Saya</button>
+      <br><br>
+      <input type="text" id="nama" placeholder="Masukkan nama">
+      <button onclick="cekNama()">Submit</button>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 DIKA YANSAH [2511500018]</p>
+    <p>&copy; 2025 DIKA YANSAH [2511500018] </p>
   </footer>
-    <script>
-      function ubahTeks() {
+
+
+  <script>
+
+    function ubahTeks() {
       document.getElementById("pesan").innerText = "Teks berhasil diubah!";
     }
 
-    // Event klik tombol
     document.getElementById("tombol").addEventListener("click", function() {
       alert("Tombol diklik!");
       console.log("Tombol berhasil diklik!");
@@ -93,22 +104,20 @@
         alert("Nama tidak boleh kosong!");
       } else {
         alert("Halo, " + nama + "!");
-      }
-    }
+      }
+    }
 
-  document.querySelector("form").addEventListener("submit", function (e) {
+        document.querySelector("form").addEventListener("submit", function (e) {
         const nama = document.getElementById("txtNama").value.trim();
         const email = document.getElementById("txtEmail").value.trim();
         const pesan = document.getElementById("txtPesan").value.trim();
         if (nama === "" || email === "" || pesan === "") {
         alert("Semua kolom wajib diisi!");
-        e.preventDefault();
-        } else {
-        alert("Terima kasih, " + nama + "! Pesan Anda telah dikirim.");
-        }
+        e.preventDefault();}
         });
-    </script>
-
-  <script src="script.js"></script>
+        
+  </script>
 </body>
- 
+</html>
+<script src="script.js"></script>
+<script>
