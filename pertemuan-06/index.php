@@ -26,7 +26,7 @@
       <h2>Selamat Datang</h2>
       $selamatdatang
 
-      <p>Ini contoh paragraf HTML.<?=$selamatdatang?></p> 
+      <p>Ini contoh paragraf html.<?=$selamatdatang?></p> 
     </section>
 
     <section id="about">
