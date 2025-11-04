@@ -24,7 +24,9 @@
   <main>
     <section id="home">
       <h2>Selamat Datang</h2>
-      <p>Ini contoh paragraf HTML.</p> 
+      $selamatdatang
+
+      <p>Ini contoh paragraf HTML.<?=$selamatdatang?></p> 
     </section>
 
     <section id="about">
