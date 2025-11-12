@@ -7,5 +7,7 @@ Kelompok: TI1A<br>
 <br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
-  <li>silahkan diisi sesuai proses pengerjaan kalian masing-masing</li>
+  <li>menambahkan section baru dengan judul pendaftaran profil pengunjung</li>
+  <li>menambahkan NIM, Nama Lengkap, Tempat Lahir,Tanggal Lahir, Hobi, Pasangan, Pekerjaan, Nama Orang Tua, Nama Kakak, dan Nama Adik dan Tombol Kirim dan Batal mengikuti contoh tombol Kirim dan Batal pada section#contact.</li>
+  
 </ol>
