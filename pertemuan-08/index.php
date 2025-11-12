@@ -28,7 +28,7 @@ $sespesan = $_SESSION["sespesan"] ?? "";
 
 <body>
   <header>
-    <h1>Website Profil Pengunjung</h1>
+    <h1>Selamat Datang</h1>
     <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
     <nav>
       <ul>
