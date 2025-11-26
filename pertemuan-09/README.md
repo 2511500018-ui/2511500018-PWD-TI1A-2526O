@@ -1,11 +1,14 @@
 # pertemuan-09
 
-NIM: 2511500018<br>
-Nama: Dika Yansah<br>
-Kelompok: TI1A<br>
-
-hari ini, Rabu 26 NOV.2025, saya belajar : <br>
 <ol>
-  <li>mempelajari php array dan fungsi</li>
-  <li></li>
-  
+  <li>Hasil UTS untuk bahan pertemuan-09</li>
+  <li>Membuat form untuk biodata sederhana mahasiswa</li>
+  <li>styling section biodata</li>
+  <li>styling section biodata beres</li>
+  <li>tangkap post dan buat session untuk form biodata</li>
+  <li>session form biodata beres</li>
+  <li>tangkap session dari file proses</li>
+  <li>tangkap session dari file proses selesai</li>
+  <li>echo session ke nilai label section contact</li>
+  <li>echo session ke nilai label section contact selesai</li>
+</ol>
