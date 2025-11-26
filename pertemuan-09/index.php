@@ -146,17 +146,37 @@ endif;
         <button type="reset">Batal</button>
       </form>
 
-      <?php if (!empty($sesnama)): ?>
-        <br><hr>
-        <h2>Yang menghubungi kami</h2>
-        <p><strong>Nama :</strong> <?php echo $sesnama ?></p>
-        <p><strong>Email :</strong> <?php echo $sesemail ?></p>
-        <p><strong>Pesan :</strong> <?php echo $sespesan ?></p>
-      <?php endif; ?>
+      <?php
+     $biodata = [
+    "nama"  => $sesnama,
+    "email" => $sesemail,
+    "pesan" => $sespesan
+    ];
 
+    $fieldconfig = [
+    "nama" => ["label" => "nama:", "sufflix" => ""],
+    "email" => ["label" => "email:", "sufflix" => ""],
+    "pesan" => ["label" => "pesan anda:", "sufflix" => ""],
+    ];
+    ?>
 
+<section id="contact">
+    <h2>Yang Menghubungi Kami</h2>
+    <label>
+        <span>Nama:</span>
+        <?= htmlspecialchars($sesnama) ?>
+    </label>
 
-    </section>
+    <label>
+        <span>Email:</span>
+        <?= htmlspecialchars($sesemail) ?>
+    </label>
+
+    <label>
+        <span>Pesan Anda:</span>
+        <?= htmlspecialchars($sespesan) ?>
+    </label>
+</section>
   </main>
 
   <footer>
@@ -167,3 +187,4 @@ endif;
 </body>
 
 </html>
+
