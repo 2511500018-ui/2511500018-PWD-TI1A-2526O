@@ -22,5 +22,4 @@ $arrBiodata = [
 
 $_SESSION["biodata"] = $arrBiodata;
 header("location: index.php#contact");
-header("location: index.php");
 ?>
