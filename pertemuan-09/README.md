@@ -1,5 +1,10 @@
 # pertemuan-09
 
+NIM : 2511500018
+NAMA : DIKA YANSAH 
+KELAS : TI1A
+
+hari ini 26 nov.2025 saya belajar :
 <ol>
   <li>Hasil UTS untuk bahan pertemuan-09</li>
   <li>Membuat form untuk biodata sederhana mahasiswa</li>
