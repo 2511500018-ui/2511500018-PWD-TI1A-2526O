@@ -5,14 +5,16 @@ Nim : 2511500018
 
 hari ini, rabu 03 desember 2025 saya mempelajari : 
 <ol>
-  <li>mempelajari php array dan fungsi</li>
-  <li>Memodif baris kode (10-19) proses.php menjadi bentuk array associative</li>
-  <li>mengubah baris kode (19-67) pada index.php dengan menambahkan suffix, Suffix merupakan istilah untuk tambahan teks di belakang sebuah nilai</li>
-  <li>menambahkan <h2>Tentang Saya</h2> untuk menampilkan array menggunakan looping
-foreach</li>
-  <li>menghapus baris 130-140 pada index.php karena sudah diakomodir menggunakan perulangan foreach untuk menampilkan isi arrayassociative $fieldConfig.</li>
-  <li>membuat fungsi php</li>
-  <li>menambahkan folder baru dengan nama "fungsi.php"</li>
-  <li>menambahkan fungsi.php untuk merender hasil atau output biodata</li>
-  <li>ikutkan file fungsi.php dengan kode require_once</li>
+  <li>mempelajari PHP dan MYSQL (Koneksi dan SELECT)</li>
+  <li>buat file baru dengan nama koneksi.php di dalam folder pertemuan-10.</li>
+  <li>mamsukkan kode pada koneksi.php:</li>
+  <li>membuka alamat http://localhost/phpmyadmin</li>
+  <li>membuka database, Pada isian Database name, ketik nama database yakni db_pwd2025. Klik Create.</li>
+  <li>membuka tab sql, Pada isian perintah SQL, ketikkan query untuk membuat tabel tbl_tamu yang akan menyimpan data dari form contact.</li>
+  <li>setelah mengetik query untuk membuat tabel tbl_tamu, klik Go</li>
+  <li>buat file baru dengan nama read.php di dalam folder pertemuan-10, ketikan sebuah kode agar bisa menampilkan rekord data pada tabel tbl_tamu</li>
+  <li>Agar tabel tbl_tamu memiliki data klik tab Insert</li>
+  <li>mengcopy file read.php, setelah itu merename nya menjadi read_inc.php pada pertemuan 10</li>
+  <li>memodif file index.php pada pertemuan 10 di baris 146</li>
+  <li>Hapus baris 133-141 pada file index.php pertemuan 10 karena sudah tidak membutuhkannya lagi (sudah diambil alih oleh file read_inc.php)</li>
 </ol>
