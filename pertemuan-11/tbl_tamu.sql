@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 10 Des 2025 pada 11.14
+-- Waktu pembuatan: 10 Des 2025 pada 11.46
 -- Versi server: 5.7.33
 -- Versi PHP: 7.4.19
 
@@ -31,18 +31,19 @@ CREATE TABLE `tbl_tamu` (
   `cid` int(11) NOT NULL,
   `cnama` varchar(100) DEFAULT NULL,
   `cemail` varchar(100) DEFAULT NULL,
-  `cpesan` text
+  `cpesan` text,
+  `dcreated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `tbl_tamu`
 --
 
-INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`) VALUES
-(1, 'DIKA YANSAH', '2511500018@mahasiswa.atmaluhur.ac.id', 'GGMU, ora dukung MU ora gacor'),
-(2, 'hamak', 'hamak@gmail.com', 'GLORY GLORY MAN UNITED'),
-(3, 'udin', 'udinganteng@gmail.com', 'Kenapa kalau duduk di atas motor bawaannya pengen ketawa ? karena duduk di atas jokes xixixi'),
-(4, 'abdul', 'abdulkece@gmail.com', 'Makanan, makanan apa yang mudah dibuat ? TAHU EASY xixixixi');
+INSERT INTO `tbl_tamu` (`cid`, `cnama`, `cemail`, `cpesan`, `dcreated_at`) VALUES
+(1, 'DIKA YANSAH', '2511500018@mahasiswa.atmaluhur.ac.id', 'GGMU, ora dukung MU ora gacor', '2025-12-10 18:32:55'),
+(2, 'hamak', 'hamak@gmail.com', 'GLORY GLORY MAN UNITED', '2025-12-10 18:32:55'),
+(3, 'udin', 'udinganteng@gmail.com', 'Kenapa kalau duduk di atas motor bawaannya pengen ketawa ? karena duduk di atas jokes xixixi', '2025-12-10 18:32:55'),
+(4, 'abdul', 'abdulkece@gmail.com', 'Makanan, makanan apa yang mudah dibuat ? TAHU EASY xixixixi', '2025-12-10 18:32:55');
 
 --
 -- Indexes for dumped tables
