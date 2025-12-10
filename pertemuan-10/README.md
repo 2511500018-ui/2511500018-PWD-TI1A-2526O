@@ -16,5 +16,5 @@ hari ini, rabu 03 desember 2025 saya mempelajari :
   <li>Agar tabel tbl_tamu memiliki data klik tab Insert</li>
   <li>mengcopy file read.php, setelah itu merename nya menjadi read_inc.php pada pertemuan 10</li>
   <li>memodif file index.php pada pertemuan 10 di baris 146</li>
-  <li>Hapus baris 133-141 pada file index.php pertemuan 10 karena sudah tidak membutuhkannya lagi (sudah diambil alih oleh file read_inc.php)</li>
+  <li>Hapus baris 133-141 pada file index.php pertemuan 10 karena sudah tidak membutuhkannya lagi (sudah diambil alih oleh file Read_inc.php)</li>
 </ol>
