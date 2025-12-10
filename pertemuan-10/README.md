@@ -5,7 +5,7 @@ Nim : 2511500018
 
 hari ini, rabu 03 desember 2025 saya mempelajari : 
 <ol>
-  <li>mempelajari PHP dan MYSQL (Koneksi dan SELECT)</li>
+  <li>mempelajari PHP dan MYSQL ( Koneksi dan SELECT )</li>
   <li>buat file baru dengan nama koneksi.php di dalam folder pertemuan-10.</li>
   <li>mamsukkan kode pada koneksi.php:</li>
   <li>membuka alamat http://localhost/phpmyadmin</li>
