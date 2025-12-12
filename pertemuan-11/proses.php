@@ -17,7 +17,7 @@ $errors = [];
 
 if ($nama === '') {
     $errors[] = 'Nama wajib diisi.';
-}
+} 
 
 if ($email === '') {
     $errors[] = 'Email wajib diisi.';
@@ -51,7 +51,7 @@ if (!$stmt) {
     redirect_ke('index.php#contact');
 }
 
-# bind parameter dan eksekusi (s = string)
+
 mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);
 
 if (mysqli_stmt_execute($stmt)) {

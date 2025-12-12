@@ -1,7 +1,7 @@
 # pertemuan-11
 
-Nama : Dika Yansah
-Nim : 2511500018 
+Nama : Dika Yansah<br>
+Nim : 2511500018 <br>
 
 hari ini, rabu 10 desember 2025 saya mempelajari : 
 <ol>
