@@ -7,8 +7,7 @@ hari ini, rabu 24 desember 2025 saya mempelajari :
 <ol>
   <li>Import SQL bahan praktikum pertemuan-13</li>
   <li>Menambah link delete di file read.php untuk proses_delete.php</li>
-  <li>Buat file baru dengan nama edit.php di folder pertemuan-12 untuk menampilkan form dengan data lama yang
-dibaca berdasarkan cid (prefill form).</li>
+  <li>Mengcopy paste file proses_update.php ke file proses_delete.php</li>
   <li>Buat file baru dengan nama proses_update.php di dalam folder pertemuan-12 untuk menyimpan perubahan
 menggunakan query UPDATE dan prepared statement.</li>
   <li>Ujicoba Akses url read.php, klik link Edit pada salah satu baris:</li>
