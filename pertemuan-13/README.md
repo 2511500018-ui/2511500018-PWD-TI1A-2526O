@@ -11,4 +11,5 @@ hari ini, rabu 24 desember 2025 saya mempelajari :
   <li>Menyesuaikan kode di proses_delete.php ke proses php</li>
   <li>Menambahkan parameter cid untuk link delete di read.php</li>
   <li>Memperbaiki file proses_delete.php agar menggunakan parameter cid</li>
+  <li>Menambahkan konfirmasi penghapusan di read.php untuk link delete</li>
 </ol>
