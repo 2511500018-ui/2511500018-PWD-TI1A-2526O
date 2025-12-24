@@ -9,6 +9,6 @@ hari ini, rabu 24 desember 2025 saya mempelajari :
   <li>Menambah link delete di file read.php untuk proses_delete.php</li>
   <li>Mengcopy paste file proses_update.php ke file proses_delete.php</li>
   <li>Menyesuaikan kode di proses_delete.php ke proses php</li>
-  <li>Ujicoba Akses url read.php, klik link Edit pada salah satu baris:</li>
+  <li>Menambahkan parameter cid untuk link delete di read.php</li>
   <li>Setelah salah satu baris dipilih, data sekarang (data lama dari DB) akan ditampilkan pada form:</li>
 </ol>
