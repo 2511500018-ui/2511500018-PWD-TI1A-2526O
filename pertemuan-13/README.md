@@ -6,7 +6,7 @@ Nim : 2511500018 <br>
 hari ini, rabu 24 desember 2025 saya mempelajari : 
 <ol>
   <li>Import SQL bahan praktikum pertemuan-13</li>
-  <li>Menggunakan hasil latihan pada folder pertemuan-11 sebagai bahan latihan pertemuan-12</li>
+  <li>Menambah link delete di file read.php untuk proses_delete.php</li>
   <li>Buat file baru dengan nama edit.php di folder pertemuan-12 untuk menampilkan form dengan data lama yang
 dibaca berdasarkan cid (prefill form).</li>
   <li>Buat file baru dengan nama proses_update.php di dalam folder pertemuan-12 untuk menyimpan perubahan
