@@ -12,7 +12,6 @@ hari ini, rabu 7 januari 2026 saya mempelajari :
   <li>mengcopy paste file read_inc.php dan ubah nama menjadi biodata_inc.php</li> 
   <li>mengcopy paste 3 file proses kemarin dan ubah nama menjadi biodata_proses_update.php, biodata_delete.php, dan biodata_proses.php</li>
   <li>Menyesuaikan semua file yang di copy paste tadi agar sesuai dengan sectionnya</li> 
-  <li>Menambahkan Waktu kirim ke dalam my sql untuk bisa di lihat nanti pada tabel di bagian biodata.php </li> 
-
-  
+  <li>Menambahkan captcha baru yang akan digunkakan pada biodata sederhana mahassiwa</li> 
+  <li>Menambahkan Waktu kirim ke dalam my sql untuk bisa di lihat nanti pada tabel di bagian biodata.php</li> 
 </ol>
