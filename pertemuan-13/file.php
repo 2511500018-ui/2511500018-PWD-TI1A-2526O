@@ -9,7 +9,7 @@
     'options' => ['min_range' => 1] artinya cid harus ≥ 1 
     (bukan 0, bahkan bukan negatif, bukan huruf, bukan HTML).
   */
-  $cid = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT, [
+  $cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
   ]);
   /*
@@ -38,8 +38,8 @@
     Ambil data lama dari DB menggunakan prepared statement, 
     jika ada kesalahan, tampilkan penanda error.
   */
-  $stmt = mysqli_prepare($conn, "SELECT cid, cnim, cnama lengkap, ctempat lahir, ctanggal lahir, chobi, cpasangan, cnama orangtua, cnama kakak, cnama adik 
-                                    FROM biodata_sederhana_mahasiswa WHERE cid = ? LIMIT 1");
+  $stmt = mysqli_prepare($conn, "SELECT cid, cnama, cemail, cpesan 
+                                    FROM tbl_tamu WHERE cid = ? LIMIT 1");
   if (!$stmt) {
     $_SESSION['flash_error'] = 'Query tidak benar.';
     redirect_ke('read.php');
@@ -57,15 +57,9 @@
   }
 
   #Nilai awal (prefill form)
-  $nama  = $row['cnim'] ?? '';
-  $nama_lengkap = $row['cnama lengkap'] ?? '';
-  $tempat_lahir = $row['ctempat lahir'] ?? '';
-  $tanggal_lahir = $row['ctanggal lahir'] ?? '';
-  $hobi = $row['chobi'] ?? '';
-  $pasangan = $row['pasangan'] ?? '';
-  $nama_orangtua = $row['cnama orangtua'] ?? '';
-  $nama_kakak = $row['cnama kakak'] ?? '';
-  $nama_adik = $row['cnama adik'] ?? '';
+  $nama  = $row['cnama'] ?? '';
+  $email = $row['cemail'] ?? '';
+  $pesan = $row['cpesan'] ?? '';
 
   #Ambil error dan nilai old input kalau ada
   $flash_error = $_SESSION['flash_error'] ?? '';
@@ -128,7 +122,7 @@
 
           <label for="txtPesan"><span>Pesan Anda:</span>
             <textarea id="txtPesan" name="txtPesanEd" rows="4" 
-              placeholder="Tulis pesan..." 
+              placeholder="Tulis pesan anda..." 
               required><?= !empty($pesan) ? $pesan : '' ?></textarea>
           </label>
 

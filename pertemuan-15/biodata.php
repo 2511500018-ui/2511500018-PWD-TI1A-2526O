@@ -1,73 +1,76 @@
 <?php
-  session_start();
-  require 'koneksi.php';
-  require 'fungsi.php';
+session_start();
+require 'koneksi.php';
+require 'fungsi.php';
 
-  $sql = "SELECT * FROM biodata_sederhana_mahasiswa ORDER BY id DESC";
-  $q = mysqli_query($conn, $sql);
-  if (!$q) {
-    die("Query error: " . mysqli_error($conn));
-  }
+$sql = "SELECT * FROM tbl_biodata_mahasiswa ORDER BY cid DESC";
+$q = mysqli_query($conn, $sql);
 ?>
 
 <?php
-  $flash_sukses = $_SESSION['flash_sukses'] ?? ''; #jika query sukses
-  $flash_error  = $_SESSION['flash_error'] ?? ''; #jika ada error
-  #bersihkan session ini
-  unset($_SESSION['flash_sukses'], $_SESSION['flash_error']); 
+$flash_berhasil = $_SESSION['flash_berhasil'] ?? '';
+$flash_gagal = $_SESSION['flash_gagal'] ?? '';
+
+unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
 ?>
 
-<?php if (!empty($flash_sukses)): ?>
-        <div style="padding:10px; margin-bottom:10px; 
-          background:#d4edda; color:#155724; border-radius:6px;">
-          <?= $flash_sukses; ?>
-        </div>
-<?php endif; ?>
+<?php if (!empty($flash_berhasil)): ?>
 
-<?php if (!empty($flash_error)): ?>
-        <div style="padding:10px; margin-bottom:10px; 
-          background:#f8d7da; color:#721c24; border-radius:6px;">
-          <?= $flash_error; ?>
-        </div>
+    <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px;">
+        <?= $flash_berhasil; ?>
+    </div>
+<?php endif; ?>
+<?php if (!empty($flash_gagal)): ?>
+    <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px;">
+        <?= $flash_gagal; ?>
+    </div>
 <?php endif; ?>
 
 <table border="1" cellpadding="8" cellspacing="0">
-  <tr>
-    <th>No</th>
-    <th>Aksi</th>
-    <th>ID</th>
-    <th>Nim</th>
-    <th>Nama Lengkap</th>
-    <th>Tempat Lahir</th>
-    <th>Tanggal Lahir</th>
-    <th>Hobi</th>
-    <th>Pasangan</th>
-    <th>Pekerjaan</th>
-    <th>Nama Orang Tua</th>
-    <th>Nama Kakak</th>
-    <th>Nama Adik</th>
-    <th>Created At</th>
-  </tr>
-  <?php $i = 1; ?>
-  <?php while ($row = mysqli_fetch_assoc($q)): ?>
     <tr>
-      <td><?= $i++ ?></td>
-      <td>
-        <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
-        <a onclick="return confirm('Hapus <?= htmlspecialchars($row['nim']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['id']; ?>">Delete</a>
-      </td>
-      <td><?= $row['id']; ?></td>
-      <td><?= htmlspecialchars($row['nim']); ?></td>
-      <td><?= htmlspecialchars($row['nama_lengkap']); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['ctempat_lahir'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['ctanggal_lahir'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['chobi'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['cpasangan'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['cpekerjaan'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['cnama_orangtua'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['cnama_kakak'])); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['cnama_adik'])); ?></td>
-      <td><?= formatTanggal(htmlspecialchars($row['dcreated_at'])); ?></td>
+        <th>NO</th>
+        <th>Action</th>
+        <th>ID</th>
+        <th>NIM</th>
+        <th>Nama Lengkap</th>
+        <th>Tempat Lahir</th>
+        <th>Tanggal Lahir</th>
+        <th>Hobi</th>
+        <th>Pasangan</th>
+        <th>Pekerjaan</th>
+        <th>Nama Orang Tua</th>
+        <th>Nama Kakak</th>
+        <th>Nama Adik</th>
+        <th>Waktu</th>
     </tr>
-  <?php endwhile; ?>
+
+    <?php
+    $no = 1;
+    while ($row = mysqli_fetch_assoc($q)): ?>
+        <tr>
+            <td><?= $no++; ?></td>
+            <td><a href="edit_biodata.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
+                <a onclick="return confirm('Apakah Anda Benar Ingin Menghapus <?= htmlspecialchars($row['cnamalengkap']); ?>?')" href="biodata_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
+            </td>
+            <td><?= $row['cid']; ?></td>
+            <td><?= htmlspecialchars($row['cnim']); ?></td>
+            <td><?= htmlspecialchars($row['cnamalengkap']); ?></td>
+            <td><?= htmlspecialchars($row['ctempatlahir']); ?></td>
+            <td><?= htmlspecialchars($row['ctanggallahir']); ?></td>
+            <td><?= htmlspecialchars($row['chobi']); ?></td>
+            <td><?= htmlspecialchars($row['cpasangan']); ?></td>
+            <td><?= htmlspecialchars($row['cpekerjaan']); ?></td>
+            <td><?= htmlspecialchars($row['cnamaortu']); ?></td>
+            <td><?= htmlspecialchars($row['cnamakakak']); ?></td>
+            <td><?= htmlspecialchars($row['cnamaadik']); ?></td>
+            <td><?= htmlspecialchars($row['dcreated_at']); ?></td>
+        </tr>
+
+    <?php endwhile; ?>
 </table>
+
+<?php
+if (!$q) {
+    die("Query error: " . mysqli_error($conn));
+}
+?>
