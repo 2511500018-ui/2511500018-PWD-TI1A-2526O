@@ -49,20 +49,20 @@ $ortu = $row["cnamaortu"] ?? "";
 $kakak = $row["cnamakakak"] ?? "";
 $adik = $row["cnamaadik"] ?? "";
 $flash_gagal = $_SESSION['flash_gagal'] ?? '';
-$outdated = $_SESSION['outdated'] ?? [];
-unset($_SESSION['flash_gagal'], $_SESSION['outdated']);
+$old = $_SESSION['old'] ?? [];
+unset($_SESSION['flash_gagal'], $_SESSION['old']);
 
-if (!empty($outdated)) {
-  $nim = $outdated['nim'] ?? $nim;
-  $namalengkap = $outdated['namalengkap'] ?? $namalengkap;
-  $tempatlhr = $outdated['tempatlahir'] ?? $tempatlhr;
-  $tanggallhr = $outdated['tanggallahir'] ?? $tanggallhr;
-  $hobi = $outdated['hobi'] ?? $hobi;
-  $pasangan = $outdated['pasangan'] ?? $pasangan;
-  $pekerjaan = $outdated['pekerjaan'] ?? $pekerjaan;
-  $ortu = $outdated['namaortu'] ?? $ortu;
-  $kakak = $outdated['namakakak'] ?? $kakak;
-  $adik = $outdated['namaadik'] ?? $adik;
+if (!empty($old)) {
+  $nim = $old['nim'] ?? $nim;
+  $namalengkap = $old['namalengkap'] ?? $namalengkap;
+  $tempatlhr = $old['tempatlahir'] ?? $tempatlhr;
+  $tanggallhr = $old['tanggallahir'] ?? $tanggallhr;
+  $hobi = $old['hobi'] ?? $hobi;
+  $pasangan = $old['pasangan'] ?? $pasangan;
+  $pekerjaan = $old['pekerjaan'] ?? $pekerjaan;
+  $ortu = $old['namaortu'] ?? $ortu;
+  $kakak = $old['namakakak'] ?? $kakak;
+  $adik = $old['namaadik'] ?? $adik;
 }
 ?>
 

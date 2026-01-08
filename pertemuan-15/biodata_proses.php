@@ -89,7 +89,7 @@ if ($namaadik === "") {
 
 require 'koneksi.php';
 if (!empty($error)) {
-    $_SESSION["outdated"] = [
+    $_SESSION["old"] = [
         "nim" => $nim,
         "namalengkap" => $namalengkap,
         "tempatlahir" => $tempatlahir,
@@ -132,11 +132,11 @@ mysqli_stmt_bind_param(
 );
 
 if (mysqli_stmt_execute($stmt)) {
-    unset($_SESSION["outdated"]);
+    unset($_SESSION["old"]);
     $_SESSION["flash_berhasil"] = "Terima kasih, pesan Anda telah tersimpan.";
     redirect_ke("index.php#biodata");
 } else {
-    $_SESSION["outdated"] =
+    $_SESSION["old"] =
         [
             "nim" => $nim,
             "namalengkap" => $namalengkap,
