@@ -9,7 +9,7 @@ hari ini, rabu 7 januari 2026 saya mempelajari :
   UAS PWD yang telah di extract di dalam folder pertemuan-15</li> 
   <li>mengcopy paste file pertemuan 13 ke file pertemuan 15</li> 
   <li>membuat tabel baru tbl_biodata_mahasiswa pada DB_pwd2025 </li> 
-  <li>mengcopy paste file pertemuan 13 ke file pertemuan 15</li> 
+  <li>mengcopy paste file read_inc.php dan merenam menjadi biodata_inc.php</li> 
   <li>mengcopy paste file pertemuan 13 ke file pertemuan 15</li>
   <li>mengcopy paste file pertemuan 13 ke file pertemuan 15</li> 
   
