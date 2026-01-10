@@ -76,7 +76,7 @@ require_once __DIR__ . "/fungsi.php";
         </label>
 
         <label for="txttanggallahir"><span>Tanggal Lahir:</span>
-          <input type="text" id="txttanggallahir" name="txttanggallahir" placeholder="Masukkan Tanggal Lahir" 
+          <input type="date" id="txttanggallahir" name="txttanggallahir" placeholder="Masukkan Tanggal Lahir" 
           value="<?= isset($old["tanggallahir"]) ? htmlspecialchars($old["tanggallahirr"]) : '' ?>">
         </label>
 
@@ -177,13 +177,14 @@ require_once __DIR__ . "/fungsi.php";
 
     </section>
     <section id="read">
+     <div id="contact-list">
       <h2>Yang Menghubungi Kami</h2>
       <?php include 'read_inc.php'; ?>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Yohanes Setiawan Japriadi [0344300002]</p>
+    <p>&copy; 2025 Dika Yansah [2511500018]</p>
   </footer>
 
   <script src="script.js"></script>

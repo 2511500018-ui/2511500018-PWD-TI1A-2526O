@@ -9,11 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   redirect_ke('index.php#contact');
 }
 
-#ambil dan bersihkan nilai dari form
-$nama  = bersihkan($_POST['txtNama']  ?? '');
-$email = bersihkan($_POST['txtEmail'] ?? '');
-$pesan = bersihkan($_POST['txtPesan'] ?? '');
-$captcha = bersihkan($_POST['txtCaptcha'] ?? '');
+$nama  = bersih($_POST['txtNama']  ?? '');
+$email = bersih($_POST['txtEmail'] ?? '');
+$pesan = bersih($_POST['txtPesan'] ?? '');
+$captcha = bersih($_POST['txtCaptcha'] ?? '');
 
 #Validasi sederhana
 $errors = []; #ini array untuk menampung semua error yang ada
