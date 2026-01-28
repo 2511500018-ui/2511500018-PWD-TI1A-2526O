@@ -207,27 +207,8 @@ require_once __DIR__ . "/fungsi.php";
     </section>
 
     <section id="about">
-      <h2>Tentang Saya</h2>
-      <?php include 'biodata_inc.php'; ?>
-    </section>
-
-    <?php
-    $flash_sukses = $_SESSION["flash_sukses"] ?? "";
-    $flash_error = $_SESSION["flash_error"] ?? "";
-    $old = $_SESSION["old"] ?? [];
-
-    unset($_SESSION["flash_sukses"], $_SESSION["flash_error"], $_SESSION["old"]);
-    ?>
-
-    <?php
-    $a = rand(1, 9);
-    $b = rand(1, 9);
-    $_SESSION["jawaban"] = $a + $b;
-    ?>
-
-    <section id="about">
       <h3>Tentang Saya</h3>
-      <?php include 'biodata_inc.php'; ?>
+      <?php include 'biodata_inc_dosen.php'; ?>
     </section>
 
     <?php
@@ -243,6 +224,7 @@ require_once __DIR__ . "/fungsi.php";
     $b = rand(1, 9);
     $_SESSION["jawaban"] = $a + $b;
     ?>
+
 
 
     <section id="contact">

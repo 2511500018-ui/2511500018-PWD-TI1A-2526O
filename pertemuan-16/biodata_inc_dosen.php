@@ -17,7 +17,7 @@ $fieldConfig = [
 ];
 
 /* ================= QUERY DATA ================= */
-$sql = "SELECT * FROM tbl_biodata_mahasiswa ORDER BY cid DESC";
+$sql = "SELECT * FROM biodata_dosen ORDER BY cid DESC";
 $q   = mysqli_query($conn, $sql);
 
 if (!$q) {
