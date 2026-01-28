@@ -1,23 +1,14 @@
 <?php
 session_start();
 
-function redirect_ke($url)
-{
-    header("Location: " . $url);
-    exit();
-}
+require_once __DIR__ . '/fungsi.php';
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     $_SESSION["flash_gagal"] = "Akses tidak valid.";
-    redirect_ke("biodata.php#biodata");
+    redirect_ke("index.php#biodata");
 }
 
-require_once 'fungsi.php';
-
-/* ambil cid */
-
-
-/* ambil data form */
+/* ================= AMBIL DATA FORM ================= */
 $nim           = bersih($_POST["txtnim"] ?? "");
 $namalengkap   = bersih($_POST["txtnamalengkap"] ?? "");
 $tempatlahir  = bersih($_POST["txttempatlahir"] ?? "");
@@ -29,11 +20,7 @@ $namaortu      = bersih($_POST["txtnamaortu"] ?? "");
 $namakakak     = bersih($_POST["txtnamakakak"] ?? "");
 $namaadik      = bersih($_POST["txtnamaadik"] ?? "");
 
-/* ambil captcha */
-
 /* ================= VALIDASI ================= */
-
-
 $error = [];
 
 if ($nim === "") {
@@ -49,45 +36,38 @@ if ($namalengkap === "") {
 }
 
 if ($tempatlahir === "") {
-    $error[] = "Tidak boleh kosong mohon diisi";
+    $error[] = "Tempat lahir wajib diisi.";
 }
 
-if ($tanggalahir === "") {
-    $error[] = "Tidak boleh kosong mohon diisi";
+if ($tanggallahir === "") {
+    $error[] = "Tanggal lahir wajib diisi.";
 }
 
 if ($hobi === "") {
-    $error[] = "Tidak boleh kosong mohon diisi";
-
+    $error[] = "Hobi wajib diisi.";
 }
 
 if ($pasangan === "") {
-    $error[] = "Tidak boleh kosong mohon diisi";
-
+    $error[] = "Pasangan wajib diisi.";
 }
 
 if ($pekerjaan === "") {
-    $error[] = "Tidak boleh kosong mohon diisi";
-
+    $error[] = "Pekerjaan wajib diisi.";
 }
 
-
 if ($namaortu === "") {
-    $error[] = "Tidak boleh kosong mohon diisi";
-
+    $error[] = "Nama orang tua wajib diisi.";
 }
 
 if ($namakakak === "") {
-    $error[] = "Tidak boleh kosong mohon diisi";
-
+    $error[] = "Nama kakak wajib diisi.";
 }
 
 if ($namaadik === "") {
-    $error[] = "Tidak boleh kosong mohon diisi";
-
+    $error[] = "Nama adik wajib diisi.";
 }
 
-require 'koneksi.php';
+/* ================= JIKA ERROR ================= */
 if (!empty($error)) {
     $_SESSION["old"] = [
         "nim" => $nim,
@@ -100,16 +80,20 @@ if (!empty($error)) {
         "namaortu" => $namaortu,
         "namakakak" => $namakakak,
         "namaadik" => $namaadik
-
     ];
 
-$_SESSION["flash_gagal"] = implode("<br>", $error);
+    $_SESSION["flash_gagal"] = implode("<br>", $error);
     redirect_ke("index.php#biodata");
 }
 
-$sql = "INSERT INTO `tbl_biodata_mahasiswa` (cnim, cnamalengkap, ctempatlahir, ctanggallahir, chobi, cpasangan, cpekerjaan, cnamaortu, cnamakakak, cnamaadik) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-$stmt = mysqli_prepare($conn, $sql);
+/* ================= SIMPAN KE DATABASE ================= */
+require __DIR__ . '/koneksi.php';
 
+$sql = "INSERT INTO tbl_biodata_mahasiswa
+        (cnim, cnamalengkap, ctempatlahir, ctanggallahir, chobi, cpasangan, cpekerjaan, cnamaortu, cnamakakak, cnamaadik)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+$stmt = mysqli_prepare($conn, $sql);
 
 if (!$stmt) {
     $_SESSION["flash_gagal"] = "Gagal menyiapkan query.";
@@ -133,27 +117,10 @@ mysqli_stmt_bind_param(
 
 if (mysqli_stmt_execute($stmt)) {
     unset($_SESSION["old"]);
-    $_SESSION["flash_berhasil"] = "Terima kasih, pesan Anda telah tersimpan.";
-    redirect_ke("index.php#biodata");
+    $_SESSION["flash_berhasil"] = "Biodata berhasil disimpan.";
 } else {
-    $_SESSION["old"] =
-        [
-            "nim" => $nim,
-            "namalengkap" => $namalengkap,
-            "tempatlahir" => $tempatlahir,
-            "tanggallahir" => $tanggallahir,
-            "hobi" => $hobi,
-            "pasangan" => $pasangan,
-            "pekerjaan" => $pekerjaan,
-            "namaortu" => $namaortu,
-            "namakakak" => $namakakak,
-            "namaadik" => $namaadik
-        ];
-    $_SESSION["flash_gagal"] = "Gagal menyimpan pesan silakan coba lagi.";
-    redirect_ke("index.php#biodata");
+    $_SESSION["flash_gagal"] = "Biodata gagal disimpan.";
 }
+
 mysqli_stmt_close($stmt);
-
-
-
-?>
+redirect_ke("index.php#biodata");
