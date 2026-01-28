@@ -13,6 +13,5 @@ hari ini, UAS rabu 28 januari 2026 saya mengerjakan :
   <li>mengcopy paste dan merename biodata sebelumnya ke pertemuan-16 ini</li>
   <li>membuat tabel baru yang akan akan digunakan untuk menampung rekord biodata dosen yang di isi dari form section</li>
   <li>menyimpan hasil record yang akan di tampilkan menggunakan file pembaca lengkap dengan link edit dan link hapus</li>
-  
-  
+  <li>merapikan struktur kode ( html, css, js, php )</li>
 </ol>
