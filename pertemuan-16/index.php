@@ -148,7 +148,7 @@ require_once __DIR__ . "/fungsi.php";
             <?= $flash_gagal; ?>
           <?php endif; ?>
 
-      <form action="biodata_proses.php" method="POST">
+      <form action="biodata_proses_dosen.php" method="POST">
 
         <label for="txtnim"><span>NIM:</span>
           <input type="text" id="txtnim" name="txtnim" placeholder="Masukkan NIM" 
@@ -207,7 +207,7 @@ require_once __DIR__ . "/fungsi.php";
     </section>
 
     <section id="about">
-      <h3>Tentang Saya</h3>
+      <h3>Tentang Dosen</h3>
       <?php include 'biodata_inc_dosen.php'; ?>
     </section>
 
@@ -224,7 +224,6 @@ require_once __DIR__ . "/fungsi.php";
     $b = rand(1, 9);
     $_SESSION["jawaban"] = $a + $b;
     ?>
-
 
 
     <section id="contact">

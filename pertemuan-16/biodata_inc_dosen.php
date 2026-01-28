@@ -26,7 +26,7 @@ if (!$q) {
 }
 
 if (mysqli_num_rows($q) === 0) {
-    echo "<p>Belum ada biodata mahasiswa yang tersimpan.</p>";
+    echo "<p>Belum ada biodata dosen yang tersimpan.</p>";
     return;
 }
 
