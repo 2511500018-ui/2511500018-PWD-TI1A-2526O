@@ -23,10 +23,10 @@ $namaadik      = bersih($_POST["txtnamaadik"] ?? "");
 /* ================= VALIDASI ================= */
 $error = [];
 
-if ($nim === "") {
-    $error[] = "NIM wajib diisi.";
+if ($nid === "") {
+    $error[] = "NID wajib diisi.";
 } elseif (mb_strlen($nim) > 10) {
-    $error[] = "NIM maksimal 10 karakter.";
+    $error[] = "NID maksimal 10 karakter.";
 }
 
 if ($namalengkap === "") {

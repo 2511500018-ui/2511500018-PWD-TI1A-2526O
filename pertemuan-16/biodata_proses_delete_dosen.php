@@ -11,7 +11,7 @@
 
   if (!$cid) {
     $_SESSION['flash_error'] = 'CID Tidak Valid.';
-    redirect_ke('biodata.php');
+    redirect_ke('biodata_dosen.php');
   }
 
 

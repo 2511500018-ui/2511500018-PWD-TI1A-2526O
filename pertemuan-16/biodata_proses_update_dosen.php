@@ -17,7 +17,7 @@ if (!$cid) {
 }
 
 /* ambil data form */
-$nim           = bersih($_POST["txtnim"] ?? "");
+$nid           = bersih($_POST["txtnid"] ?? "");
 $namalengkap   = bersih($_POST["txtnamalengkap"] ?? "");
 $tempatlahir   = bersih($_POST["txttempatlahir"] ?? "");
 $tanggallahir  = bersih($_POST["txttanggallahir"] ?? "");
@@ -37,7 +37,7 @@ if (!isset($_SESSION["Jawaban"]) || $captcha === "" || (int)$captcha !== (int)$_
 
 /* ================= VALIDASI ================= */
 $error = [];
-if ($nim === "") $error[] = "NIM wajib diisi.";
+if ($nid === "") $error[] = "NID wajib diisi.";
 if ($namalengkap === "") $error[] = "Nama wajib diisi.";
 if ($namaortu === "") $error[] = "Nama orang tua wajib diisi.";
 
@@ -47,7 +47,7 @@ if (!empty($error)) {
 }
 
 /* ================= UPDATE DATABASE ================= */
-$sql = "UPDATE biodata_dosen SET
+$sql = "UPDATE tbl_biodata_mahasiswa SET
     cnim = ?, 
     cnamalengkap = ?, 
     ctempatlahir = ?, 
@@ -63,13 +63,13 @@ $sql = "UPDATE biodata_dosen SET
 $stmt = mysqli_prepare($conn, $sql);
 if (!$stmt) {
     $_SESSION["flash_gagal"] = "Gagal prepare database.";
-    redirect_ke("edit_biodata.php?cid=" . $cid);
+    redirect_ke("edit_biodata_dosen.php?cid=" . $cid);
 }
 
 mysqli_stmt_bind_param(
     $stmt,
     "ssssssssssi",
-    $nim,
+    $nid,
     $namalengkap,
     $tempatlahir,
     $tanggallahir,

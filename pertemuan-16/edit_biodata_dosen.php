@@ -30,7 +30,7 @@ if (!$row) {
   redirect_ke('biodata_dosen.php');
 }
 
-$nim = $row['cnim'] ?? "";
+$nid = $row['cnim'] ?? "";
 $namalengkap = $row["cnamalengkap"] ?? "";
 $tempatlhr = $row["ctempatlahir"] ?? "";
 $tanggallhr = $row["ctanggallahir"] ?? "";
@@ -45,7 +45,7 @@ $old = $_SESSION['old'] ?? [];
 unset($_SESSION['flash_gagal'], $_SESSION['old']);
 
 if (!empty($old)) {
-  $nim = $old['nim'] ?? $nim;
+  $nid = $old['nid'] ?? $nid;
   $namalengkap = $old['namalengkap'] ?? $namalengkap;
   $tempatlhr = $old['tempatlahir'] ?? $tempatlhr;
   $tanggallhr = $old['tanggallahir'] ?? $tanggallhr;
@@ -73,3 +73,85 @@ $b = 3;
   <title>Judul Halaman</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+<body>
+  <header>
+    <h1>Ini Header</h1>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="biodata">
+      <h2>Edit Biodata</h2>
+
+      <?php if (!empty($flash_gagal)): ?>
+        <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px;">
+          <?= $flash_gagal; ?>
+        </div>
+      <?php endif; ?>
+
+      <form action="biodata_proses_update_dosen.php" method="POST">
+        <input type="hidden" name="cid" value="<?= $cid ?>">
+
+
+        <label><span>NID:</span>
+          <input type="text" name="txtnid" value="<?= $nid ?>">
+        </label>
+
+        <label><span>Nama Lengkap:</span>
+          <input type="text" name="txtnamalengkap" value="<?= $namalengkap ?>">
+        </label>
+
+        <label><span>Tempat Lahir:</span>
+          <input type="text" name="txttempatlahir" value="<?= $tempatlhr ?>">
+        </label>
+
+        <label><span>Tanggal Lahir:</span>
+          <input type="text" name="txttanggallahir" value="<?= $tanggallhr ?>">
+        </label>
+
+        <label><span>Hobi:</span>
+          <input type="text" name="txthobi" value="<?= $hobi ?>">
+        </label>
+
+        <label><span>Pasangan:</span>
+          <input type="text" name="txtpasangan" value="<?= $pasangan ?>">
+        </label>
+
+        <label><span>Pekerjaan:</span>
+          <input type="text" name="txtpekerjaan" value="<?= $pekerjaan ?>">
+        </label>
+
+        <label><span>Nama Orang Tua:</span>
+          <input type="text" name="txtnamaorangtua" value="<?= $ortu ?>">
+        </label>
+
+        <label><span>Nama Kakak:</span>
+          <input type="text" name="txtnamakakak" value="<?= $kakak ?>">
+        </label>
+
+        <label><span>Nama Adik:</span>
+          <input type="text" name="txtnamaadik" value="<?= $adik ?>">
+        </label>
+
+        <label>
+          <span>Berapa <?= $a ?> + <?= $b ?> ?</span>
+          <input type="number" name="txtcaptcha">
+        </label>
+
+        <button type aherf="submit">Kirim</button>
+        <button type="reset">Batal</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

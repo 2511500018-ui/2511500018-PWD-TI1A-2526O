@@ -37,7 +37,7 @@ if (!isset($_SESSION["Jawaban"]) || $captcha === "" || (int)$captcha !== (int)$_
 
 /* ================= VALIDASI ================= */
 $error = [];
-if ($nim === "") $error[] = "NIM wajib diisi.";
+if ($nid === "") $error[] = "NID wajib diisi.";
 if ($namalengkap === "") $error[] = "Nama wajib diisi.";
 if ($namaortu === "") $error[] = "Nama orang tua wajib diisi.";
 

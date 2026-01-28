@@ -4,7 +4,7 @@ require_once __DIR__ . '/fungsi.php';
 
 /* ================= KONFIGURASI FIELD ================= */
 $fieldConfig = [
-    "nim" => ["label" => "NIM:", "suffix" => ""],
+    "nid" => ["label" => "NID:", "suffix" => ""],
     "namalengkap" => ["label" => "Nama Lengkap:", "suffix" => " 😎"],
     "tempatlahir" => ["label" => "Tempat Lahir:", "suffix" => ""],
     "tanggallahir" => ["label" => "Tanggal Lahir:", "suffix" => ""],
@@ -17,7 +17,7 @@ $fieldConfig = [
 ];
 
 /* ================= QUERY DATA ================= */
-$sql = "SELECT * FROM biodata_dosen ORDER BY cid DESC";
+$sql = "SELECT * FROM tbl_biodata_mahasiswa ORDER BY cid DESC";
 $q   = mysqli_query($conn, $sql);
 
 if (!$q) {
@@ -26,7 +26,7 @@ if (!$q) {
 }
 
 if (mysqli_num_rows($q) === 0) {
-    echo "<p>Belum ada biodata dosen yang tersimpan.</p>";
+    echo "<p>Belum ada biodata mahasiswa yang tersimpan.</p>";
     return;
 }
 
@@ -34,7 +34,7 @@ if (mysqli_num_rows($q) === 0) {
 while ($row = mysqli_fetch_assoc($q)) {
 
     $arrBiodata = [
-        "nim"          => $row['cnim'] ?? "",
+        "nid"          => $row['cnim'] ?? "",
         "namalengkap"  => $row['cnamalengkap'] ?? "",
         "tempatlahir"  => $row['ctempatlahir'] ?? "",
         "tanggallahir" => formatTanggal($row['ctanggallahir'] ?? ""),

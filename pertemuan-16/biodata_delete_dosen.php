@@ -15,7 +15,7 @@ if (!$cid) {
 
 $stmt = mysqli_prepare(
     $conn,
-    "DELETE FROM biodata_dosen WHERE cid = ?"
+    "DELETE FROM tbl_biodata_mahasiswa WHERE cid = ?"
 );
 
 if (!$stmt) {

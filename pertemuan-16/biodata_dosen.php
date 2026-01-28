@@ -3,7 +3,7 @@ session_start();
 require 'koneksi.php';
 require 'fungsi.php';
 
-$sql = "SELECT * FROM biodata_dosen ORDER BY cid DESC";
+$sql = "SELECT * FROM tbl_biodata_mahasiswa ORDER BY cid DESC";
 $q = mysqli_query($conn, $sql);
 ?>
 
@@ -31,7 +31,7 @@ unset($_SESSION['flash_berhasil'], $_SESSION['flash_gagal']);
         <th>NO</th>
         <th>Action</th>
         <th>ID</th>
-        <th>NIM</th>
+        <th>NID</th>
         <th>Nama Lengkap</th>
         <th>Tempat Lahir</th>
         <th>Tanggal Lahir</th>

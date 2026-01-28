@@ -83,18 +83,6 @@ header li a:active {
   margin-bottom: 16px;
 }
 
-#home h3,
-#about h3,
-#contact h3,
-#biodata h3 {
-  color: #003366;
-  border-bottom: 2px solid #003366;
-  padding-bottom: 6px;
-  margin-top: 0;
-  margin-bottom: 16px;
-
-}
-
 #home p {
   text-align: justify;
 }

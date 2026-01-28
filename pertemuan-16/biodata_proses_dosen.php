@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 }
 
 /* ================= AMBIL DATA FORM ================= */
-$nim           = bersih($_POST["txtnim"] ?? "");
+$nid           = bersih($_POST["txtnid"] ?? "");
 $namalengkap   = bersih($_POST["txtnamalengkap"] ?? "");
 $tempatlahir  = bersih($_POST["txttempatlahir"] ?? "");
 $tanggallahir = bersih($_POST["txttanggallahir"] ?? "");
@@ -23,10 +23,10 @@ $namaadik      = bersih($_POST["txtnamaadik"] ?? "");
 /* ================= VALIDASI ================= */
 $error = [];
 
-if ($nim === "") {
-    $error[] = "NIM wajib diisi.";
-} elseif (mb_strlen($nim) > 10) {
-    $error[] = "NIM maksimal 10 karakter.";
+if ($nid === "") {
+    $error[] = "NID wajib diisi.";
+} elseif (mb_strlen($nid) > 10) {
+    $error[] = "NID maksimal 10 karakter.";
 }
 
 if ($namalengkap === "") {
@@ -70,7 +70,7 @@ if ($namaadik === "") {
 /* ================= JIKA ERROR ================= */
 if (!empty($error)) {
     $_SESSION["old"] = [
-        "nim" => $nim,
+        "nid" => $nid,
         "namalengkap" => $namalengkap,
         "tempatlahir" => $tempatlahir,
         "tanggallahir" => $tanggallahir,
@@ -89,7 +89,7 @@ if (!empty($error)) {
 /* ================= SIMPAN KE DATABASE ================= */
 require __DIR__ . '/koneksi.php';
 
-$sql = "INSERT INTO biodata_dosen
+$sql = "INSERT INTO tbl_biodata_mahasiswa
         (cnim, cnamalengkap, ctempatlahir, ctanggallahir, chobi, cpasangan, cpekerjaan, cnamaortu, cnamakakak, cnamaadik)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -103,7 +103,7 @@ if (!$stmt) {
 mysqli_stmt_bind_param(
     $stmt,
     "ssssssssss",
-    $nim,
+    $nid,
     $namalengkap,
     $tempatlahir,
     $tanggallahir,
